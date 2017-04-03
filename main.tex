@@ -50,23 +50,23 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Elasticity~\cite{herbst2013elasticity}~\cite{galante2012survey}~\cite{gulati2011cloud}~\cite{sharma2011cost}~\cite{moore2013coordinated}}
+  \frametitle{Elasticity~\cite{herbst2013elasticity}~\cite{galante2012survey}~\cite{gulati2011cloud}}
   \begin{definition}
-  \parbox{\linewidth}{\textbf{Elasticity} is the degree to which a system is able to adapt to workload changes by provisioning and de-provisioning resources in an autonomic manner, such that at each point in time the available resources \textit{match} the current demand as closely as possible.
-  }
+  \parbox{\linewidth}{\textbf{Elasticity} is the degree to which a system is able to adapt to workload changes by provisioning and de-provisioning resources in an autonomic manner, such that at each point in time the available resources \textit{match} the current demand as closely as possible.}
   \end{definition}
 \end{frame}
 
 \begin{frame}
   \frametitle{Kinds of scaling}
   \begin{description}
-    \item[Horizontal]<1->
-    \item[Veritcal]<2-> (\textit{Replication}) Adding/Removing instances (e.g. VMs, modules\dots)
+    \item[Horizontal]<1-> (\textit{Replication}) Adding/Removing instances (e.g.\ VMs, modules\dots).
+    \item[Vertical]<2-> (\textit{Resizing}) Adding resources (e.g.\ processing, memory\dots).
+    \item[Migration]<3-> (\textit{Scaling Out}) Transferring a VM from one physical server to another one.
   \end{description}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Example~\cite{herbst2013elasticity}}
+  \frametitle{Example of matching demand~\cite{herbst2013elasticity}}
   \begin{figure}
     \includegraphics[clip, width=\textwidth]{images/workload}
   \end{figure}
@@ -91,7 +91,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Example~\cite{moore2013coordinated}}
+  \frametitle{Example of an elasticity controller~\cite{moore2013coordinated}}
 \end{frame}
 
 
@@ -112,7 +112,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Example~\cite{sharma2011cost}}
+  \frametitle{Example of a provisioning system~\cite{sharma2011cost}}
 \end{frame}
 
 

@@ -33,7 +33,7 @@
 \begin{frame}
   \frametitle{What It Is Not~\cite{herbst2013elasticity}}
   \begin{description}
-    \parbox{\linewidth}{%
+    \parbox{\linewidth}{
     \item[Scalability] Sustain increasing workloads with adequate performance.
     \item[Efficiency] Amount of resources consumed for a given amount of work.
     }
@@ -45,37 +45,22 @@
   \frametitle{}
   \centering
   \Large\textbf{Elasticity} $\neq$ \textbf{Scalability}
-  \pause{}
-  It's more than that. That's the selling point.
+  
+  \visible<2->{It's more than that. That's the selling point.}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Elasticity~\cite{herbst2013elasticity}~\cite{galante2012survey}~\cite{gulati2011cloud}}
+  \frametitle{Elasticity~\cite{herbst2013elasticity}~\cite{galante2012survey}~\cite{gulati2011cloud}~\cite{sharma2011cost}~\cite{moore2013coordinated}}
   \begin{definition}
-  \parbox{\linewidth}{\textbf{Elasticity} is the degree to which a system is able to adapt to workload changes by provisioning and de-provisioning resources in an autonomic manner, such that at each point in time the available resources \textit{match} the current demand as closely as possible.}
+  \parbox{\linewidth}{\textbf{Elasticity}is the degree to which a system is able to adapt to workload changes by provisioning and de-provisioning resources in an autonomic manner, such that at each point in time the available resources\textit{match}the current demand as closely as possible.
+  }
   \end{definition}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Kinds of scaling}
-  \begin{description}
-    \item[Horizontal]<1-> (\textit{Replication}) Adding/Removing instances (e.g.\ VMs, modules\dots).
-    \item[Vertical]<2-> (\textit{Resizing}) Adding resources (e.g.\ processing, memory\dots).
-    \item[Migration]<3-> (\textit{Scaling Out}) Transferring a VM from one physical server to another one.
-  \end{description}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Example of matching demand~\cite{herbst2013elasticity}}
+  \frametitle{Example~\cite{herbst2013elasticity}}
   \begin{figure}
     \includegraphics[clip, width=\textwidth]{images/workload}
-  \end{figure}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Different parameters involved in elasticity}
-  \begin{figure}
-    \includegraphics[width=\textwidth]{images/elasticity2}
   \end{figure}
 \end{frame}
 
@@ -83,7 +68,7 @@
 \section{When to Scale}
 \begin{frame}
   \frametitle{Reaction}
-  Set of rules (\textit{thresholds}).
+  Set of rules.
 \end{frame}
 
 \begin{frame}
@@ -91,7 +76,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Example of an elasticity controller~\cite{moore2013coordinated}}
+  \frametitle{Example~\cite{moore2013coordinated}}
 \end{frame}
 
 
@@ -99,9 +84,9 @@
 \begin{frame}
   \frametitle{Mechanisms}
   \begin{description}
-    \item[Migration]<1->
-    \item[Resizing]<2-> \textit{Can be a migration.}
-    \item[Replication]<3->
+    \item[Migration]
+    \item[Resizing] \textit{Might be a migration.}
+    \item[Replication]
   \end{description}
 \end{frame}
 
@@ -112,7 +97,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Example of a provisioning system~\cite{sharma2011cost}}
+  \frametitle{Example~\cite{sharma2011cost}}
 \end{frame}
 
 
@@ -121,7 +106,6 @@
   \frametitle{Conclusion}
   Not there yet.
   \begin{itemize}
-    \item Elements tightly coupled but studied independently.
     \item Mechanisms conceived with assuming other elements in the workflow to be perfect.
   \end{itemize}
 \end{frame}

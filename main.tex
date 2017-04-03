@@ -40,13 +40,12 @@
   \end{description}
 \end{frame}
 
-
 \begin{frame}
   \frametitle{}
   \centering
   \Large\textbf{Elasticity} $\neq$ \textbf{Scalability}
-  \pause{}
-  It's more than that. That's the selling point.
+
+  \visible<2->{It's more than that. That's the selling point.}
 \end{frame}
 
 \begin{frame}
@@ -54,15 +53,6 @@
   \begin{definition}
   \parbox{\linewidth}{\textbf{Elasticity} is the degree to which a system is able to adapt to workload changes by provisioning and de-provisioning resources in an autonomic manner, such that at each point in time the available resources \textit{match} the current demand as closely as possible.}
   \end{definition}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Kinds of scaling}
-  \begin{description}
-    \item[Horizontal]<1-> (\textit{Replication}) Adding/Removing instances (e.g.\ VMs, modules\dots).
-    \item[Vertical]<2-> (\textit{Resizing}) Adding resources (e.g.\ processing, memory\dots).
-    \item[Migration]<3-> (\textit{Scaling Out}) Transferring a VM from one physical server to another one.
-  \end{description}
 \end{frame}
 
 \begin{frame}
@@ -74,9 +64,10 @@
 
 \begin{frame}
   \frametitle{Different parameters involved in elasticity}
-  \begin{figure}
-    \includegraphics[width=\textwidth]{images/elasticity2}
-  \end{figure}
+  \includegraphics<1->[width=\textwidth]{images/elasticity2_1}\hspace*{-\textwidth}%
+  \includegraphics<2->[width=\textwidth]{images/elasticity2_2}\hspace*{-\textwidth}%
+  \includegraphics<3->[width=\textwidth]{images/elasticity2_3}\hspace*{-\textwidth}%
+  \includegraphics<4->[width=\textwidth]{images/elasticity2_4}\hspace*{-\textwidth}%
 \end{frame}
 
 
@@ -97,11 +88,11 @@
 
 \section{How to Scale}
 \begin{frame}
-  \frametitle{Mechanisms}
+  \frametitle{Kinds of scaling / Mechanisms}
   \begin{description}
-    \item[Migration]<1->
-    \item[Resizing]<2-> \textit{Can be a migration.}
-    \item[Replication]<3->
+    \item[Horizontal]<1-> (\textit{Replication}) Adding/Removing instances (e.g.\ VMs, modules\dots).
+    \item[Vertical]<2-> (\textit{Resizing}) Adding resources (e.g.\ processing, memory\dots).
+    \item[Migration]<3-> (\textit{Scaling Out}) Transferring a VM from one physical server to another one.
   \end{description}
 \end{frame}
 
@@ -113,6 +104,11 @@
 
 \begin{frame}
   \frametitle{Example of a provisioning system~\cite{sharma2011cost}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example of architecture~\cite{sharma2011cost}}
+  \includegraphics[width=\textwidth]{images/elasticity4_arch.pdf}
 \end{frame}
 
 

@@ -1,5 +1,10 @@
 \documentclass{beamer}
 \usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\tikzset{set/.style={draw,circle,inner sep=0pt,align=center}}
 
 \usepackage{appendixnumberbeamer}
 
@@ -49,10 +54,22 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Elasticity~\cite{herbst2013elasticity}~\cite{galante2012survey}~\cite{gulati2011cloud}}
-  \begin{definition}
-  \parbox{\linewidth}{\textbf{Elasticity} is the degree to which a system is able to adapt to workload changes by provisioning and de-provisioning resources in an autonomic manner, such that at each point in time the available resources \textit{match} the current demand as closely as possible.}
-  \end{definition}
+\begin{figure}
+\tikzstyle{every path}=[line width=1pt, color=orange, text=white]
+\def\firstcircle{(-2.85,0) circle (1.5cm)}
+\def\secondcircle{(0,2.85) circle (1.5cm)}
+\def\thirdcircle{(2.85,0) circle (1.5cm)}
+\begin{tikzpicture}
+    \begin{scope}[shift={(3cm,-5cm)}]
+        \fill[black!60] \firstcircle;
+        \fill[black!60] \secondcircle;
+        \fill[black!60] \thirdcircle;
+        \draw \firstcircle node {\Large Speed};
+        \draw \secondcircle node {\Large Scalability};
+        \draw \thirdcircle node {\Large Precision};
+    \end{scope}
+\end{tikzpicture}
+\end{figure}
 \end{frame}
 
 \begin{frame}
@@ -60,6 +77,35 @@
   \begin{figure}
     \includegraphics[clip, width=\textwidth]{images/workload}
   \end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}
+\tikzstyle{every path}=[line width=1pt, color=orange, text=white]
+\def\firstcircle{(-2.85,0) circle (1.5cm)}
+\def\secondcircle{(0,2.85) circle (1.5cm)}
+\def\thirdcircle{(2.85,0) circle (1.5cm)}
+\def\bigcircle{(0,1) ellipse (5.5cm and 3.5cm)}
+\begin{tikzpicture}
+    \begin{scope}[shift={(3cm,-5cm)}]
+        \visible<2->{\fill[black!70] \bigcircle;}
+        \fill[black!60] \firstcircle;
+        \fill[black!60] \secondcircle;
+        \fill[black!60] \thirdcircle;
+        \visible<2->{\draw \bigcircle node [below] {\Large Elasticity};}
+        \draw \firstcircle node {\Large Speed};
+        \draw \secondcircle node {\Large Scalability};
+        \draw \thirdcircle node {\Large Precision};
+    \end{scope}
+\end{tikzpicture}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Elasticity~\cite{herbst2013elasticity}~\cite{galante2012survey}~\cite{gulati2011cloud}}
+  \begin{definition}
+  \parbox{\linewidth}{\textbf{Elasticity} is the degree to which a system is able to adapt to workload changes by provisioning and de-provisioning resources in an autonomic manner, such that at each point in time the available resources \textit{match} the current demand as closely as possible.}
+  \end{definition}
 \end{frame}
 
 \begin{frame}

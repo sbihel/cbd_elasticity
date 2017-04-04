@@ -102,14 +102,14 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Elasticity~\cite{herbst2013elasticity}~\cite{galante2012survey}~\cite{gulati2011cloud}}
+  \frametitle{Elasticity~\cite{herbst2013elasticity}}
   \begin{definition}
   \parbox{\linewidth}{\textbf{Elasticity} is the degree to which a system is able to adapt to workload changes by provisioning and de-provisioning resources in an autonomic manner, such that at each point in time the available resources \textit{match} the current demand as closely as possible.}
   \end{definition}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Different parameters involved in elasticity}
+  \frametitle{Different parameters involved in elasticity~\cite{galante2012survey}}
   \includegraphics<1->[width=\textwidth]{images/elasticity2_1}\hspace*{-\textwidth}%
   \includegraphics<2->[width=\textwidth]{images/elasticity2_2}\hspace*{-\textwidth}%
   \includegraphics<3->[width=\textwidth]{images/elasticity2_3}\hspace*{-\textwidth}%
@@ -119,16 +119,45 @@
 
 \section{When to Scale}
 \begin{frame}
-  \frametitle{Reaction}
-  Set of rules (\textit{thresholds}).
+  \frametitle{Reaction~\cite{gulati2011cloud}}
+  \begin{center}
+    Set of rules (\textit{thresholds}).
+  \end{center}
+
+  \vspace*{\fill}
+
+  \visible<2->{Different resource managements.~\cite{gulati2011cloud}}
+  \begin{description}
+    \item[Hierarchical]<3-> Management systems built on top of each other. E.g.\ cluster level with layer on top.
+    \item[Flat]<4-> Completely decentralized management.
+  \end{description}
+
+  \vspace*{\fill}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Prediction}
+  \frametitle{Prediction~\cite{gulati2011cloud}}
+  \begin{center}
+    Models built through analysis, learning, queueing theory\dots
+  \end{center}
+
+  \vspace*{\fill}
+
+  \visible<2->{Another resource managements.}
+  \begin{description}
+    \item[Statistical]<3-> Small scale with dynamic clusters. Repeated small scale optimizations attain large scale load and optimal placement.
+  \end{description}
+
+  \vspace*{\fill}
 \end{frame}
 
 \begin{frame}
   \frametitle{Example of an elasticity controller~\cite{moore2013coordinated}}
+  \begin{center}
+    Mixing reactive and predictive methods.
+  \end{center}
+  \pause{}
+  \includegraphics[width=\textwidth]{images/elasticity5}
 \end{frame}
 
 
@@ -137,19 +166,21 @@
   \frametitle{Kinds of scaling / Mechanisms}
   \begin{description}
     \item[Horizontal]<1-> (\textit{Replication}) Adding/Removing instances (e.g.\ VMs, modules\dots).
-    \item[Vertical]<2-> (\textit{Resizing}) Adding resources (e.g.\ processing, memory\dots).
+    \item[Vertical]<2-> (\textit{Resizing}) Adding resources (e.g.\ processing, memory\dots). \textit{Not always available.}
     \item[Migration]<3-> (\textit{Scaling Out}) Transferring a VM from one physical server to another one.
   \end{description}
 \end{frame}
 
 \begin{frame}
   \frametitle{Configurations \& Transitions}
+  \includegraphics[width=\textwidth]{images/elasticity4_config}
   \vspace*{\fill}
   There is also cost for transition.
 \end{frame}
 
 \begin{frame}
   \frametitle{Example of a provisioning system~\cite{sharma2011cost}}
+  Integer Linear Program to take into account multiple parameters.
 \end{frame}
 
 \begin{frame}
@@ -165,6 +196,7 @@
   \begin{itemize}
     \item Elements tightly coupled but studied independently.
     \item Mechanisms conceived with assuming other elements in the workflow to be perfect.
+    \item Overhead can be a problem (frequency, decomposition, failures\dots).
   \end{itemize}
 \end{frame}
 
